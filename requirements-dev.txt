@@ -1,0 +1,3 @@
+-r requirements.txt
+# Optional MCP SDK interoperability test only
+mcp==1.26.0

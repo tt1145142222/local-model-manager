@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "host": "127.0.0.1",
+  "port": 18765,
+  "sample_seconds": 5,
+  "idle_grace_seconds": 120,
+  "min_available_ram_gib": 12,
+  "min_commit_free_gib": 12,
+  "min_free_vram_gib": 3,
+  "app_memory_reclaim": {
+    "enabled": false
+  },
+  "adaptive": {
+    "policy_revision": 2,
+    "recovery_seconds": 30,
+    "idle_sample_seconds": 10,
+    "trend_horizon_seconds": 10,
+    "max_trend_headroom_gib": 8,
+    "measured_margin_fraction": 0.15,
+    "measured_margin_gib": 1,
+    "manager_memory_target_mib": 96,
+    "short_task_sample_seconds": 0.5,
+    "active_sample_seconds": 1,
+    "protection_recovery_seconds": 10,
+    "forecast_guard_seconds": 10
+  },
+  "models": {}
+}

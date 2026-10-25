@@ -1,0 +1,21 @@
+# Local configuration, credentials and runtime records
+/config.json
+/work/
+/.venv/
+__pycache__/
+*.py[cod]
+*.log
+*.sqlite3*
+.env
+.env.*
+api-token
+api-key.txt
+*.pem
+*.key
+# Model weights and media are not part of this project
+*.gguf
+*.safetensors
+*.pt
+*.pth
+*.mp4
+*.wav
