@@ -1,0 +1,26 @@
+{
+  "label": "My local llamacpp",
+  "kind": "llamacpp",
+  "workload_kind": "llm",
+  "root": "C:/ExampleAI/llamacpp",
+  "exe": "C:/ExampleAI/llamacpp/llama-server.exe",
+  "url": "http://127.0.0.1:8090",
+  "startup_free_ram_gib": 20,
+  "startup_commit_free_gib": 36,
+  "startup_free_vram_gib": 24,
+  "context_capacity": 32768,
+  "start_argv": [
+    "C:/ExampleAI/llamacpp/llama-server.exe",
+    "-m",
+    "C:/ExampleAI/llamacpp/model.gguf",
+    "-c",
+    "32768",
+    "-np",
+    "1",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8090",
+    "--slots"
+  ]
+}

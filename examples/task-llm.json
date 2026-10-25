@@ -1,0 +1,6 @@
+{
+  "input_tokens": 2048,
+  "max_output_tokens": 1024,
+  "context_tokens": 32768,
+  "workflow_signature": "example-llm-replace-with-actual-model-and-quality-signature"
+}

@@ -1,0 +1,20 @@
+{
+  "label": "My local comfyui",
+  "kind": "comfyui",
+  "workload_kind": "video",
+  "root": "C:/ExampleAI/comfyui",
+  "exe": "C:/ExampleAI/comfyui/python/python.exe",
+  "url": "http://127.0.0.1:8190",
+  "startup_free_ram_gib": 20,
+  "startup_commit_free_gib": 36,
+  "startup_free_vram_gib": 24,
+  "start_argv": [
+    "C:/ExampleAI/comfyui/python/python.exe",
+    "-s",
+    "C:/ExampleAI/comfyui/ComfyUI/main.py",
+    "--listen",
+    "127.0.0.1",
+    "--port",
+    "8190"
+  ]
+}
