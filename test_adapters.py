@@ -278,7 +278,9 @@ class RegisteredAdapters(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
-        self.config = {'root': self.tmp.name, 'exe': str(Path(self.tmp.name) / 'model.exe'),
+        # Windows CI may expose TEMP through an 8.3 alias (RUNNER~1).
+        # Real psutil executable paths are resolved; make the mock equally canonical.
+        self.config = {'root': self.tmp.name, 'exe': str((Path(self.tmp.name) / 'model.exe').resolve()),
                        'kind': 'llamacpp', 'url': 'http://127.0.0.1:8787'}
 
     def fake_process(self, args):
