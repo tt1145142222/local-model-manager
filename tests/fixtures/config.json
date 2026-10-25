@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "host": "127.0.0.1",
+  "port": 18765,
+  "sample_seconds": 5,
+  "idle_grace_seconds": 120,
+  "min_available_ram_gib": 12,
+  "min_commit_free_gib": 12,
+  "min_free_vram_gib": 3,
+  "app_memory_reclaim": {
+    "enabled": false
+  },
+  "adaptive": {
+    "policy_revision": 2,
+    "recovery_seconds": 30,
+    "idle_sample_seconds": 10,
+    "trend_horizon_seconds": 10,
+    "max_trend_headroom_gib": 8,
+    "measured_margin_fraction": 0.15,
+    "measured_margin_gib": 1,
+    "manager_memory_target_mib": 96,
+    "short_task_sample_seconds": 0.5,
+    "active_sample_seconds": 1,
+    "protection_recovery_seconds": 10,
+    "forecast_guard_seconds": 10
+  },
+  "models": {
+    "h3": {
+      "label": "MiniMax H3 / ComfyUI",
+      "kind": "comfyui",
+      "workload_kind": "video",
+      "root": "C:/ExampleAI/H3",
+      "url": "http://127.0.0.1:8188",
+      "exe": "C:/ExampleAI/H3/python/python.exe",
+      "startup_free_vram_gib": 24,
+      "startup_free_ram_gib": 20,
+      "startup_commit_free_gib": 36,
+      "unprofiled_peak_extra_gib": {
+        "cold": {
+          "ram": 8,
+          "commit": 26,
+          "vram": 23.5
+        },
+        "warm": {
+          "ram": 8,
+          "commit": 8,
+          "vram": 1
+        }
+      },
+      "startup_vram_admission_gib": 24
+    },
+    "muse": {
+      "label": "Muse Glimmer 30B / llama.cpp",
+      "kind": "llamacpp",
+      "workload_kind": "llm",
+      "context_capacity": 65536,
+      "root": "C:/ExampleAI/Muse",
+      "url": "http://127.0.0.1:8085",
+      "agent_url": "http://127.0.0.1:4096",
+      "exe": "C:/ExampleAI/Muse/llama-server.exe",
+      "startup_free_vram_gib": 22,
+      "startup_free_ram_gib": 16,
+      "startup_commit_free_gib": 26,
+      "unprofiled_peak_extra_gib": {
+        "cold": {
+          "ram": 4,
+          "commit": 8,
+          "vram": 2
+        },
+        "warm": {
+          "ram": 4,
+          "commit": 8,
+          "vram": 2
+        }
+      }
+    }
+  }
+}
